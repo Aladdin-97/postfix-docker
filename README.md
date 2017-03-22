@@ -19,7 +19,7 @@ variables:
 -------------------
 to launch : 
 -------------------
-     docker run -dit -e SMTP_LOGIN=aladin@email-adress.it -e SMTP_PASSWORD=aladin-password -e SERVER=smtp.aladin-server.it postfix/relay
+     docker run -dit -e SMTP_LOGIN=aladin@email-adress.it -e SMTP_PASSWORD=aladin-password -e SERVER=smtp.aladin-server.it postfix-docker
 
 
 ----------------------
