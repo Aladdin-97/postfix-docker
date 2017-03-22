@@ -8,7 +8,7 @@ contains :
      - Dockerfile to build image which include postfix service to relay mail, rsyslog to log inside container, stunnel service to             implement "tls wrapper"
      - run.sh to start postfix, rsyslog and stunnel services
      - README.md file with some instructions on how to use ;)
- source code available on -->  <a href="https://github.com/aladin-29/postfix-relay-modified">Postfix-Relay-on-Docker</a> 
+
 ---------------
 variables:
 ---------------
