@@ -1,23 +1,21 @@
-# postfix-relay-modified
+# postfix-relay-on-Docker
 
 -----------------------------------
 Simple mail relay configuration 
 -----------------------------------
 contains : 
      
-     - stunnel.conf to implement "tcp wrapper"
-     - run.sh to start postfix service and more
-     - rsyslog.conf to log [ obviously ;) ]
-
+     - Dockerfile to build image which include postfix service to relay mail, rsyslog to log inside container, stunnel service to             implement "tls wrapper"
+     - run.sh to start postfix, rsyslog and stunnel services
+     - README.md file with some instructions on how to use ;)
+ source code available on -->  <a href="https://github.com/aladin-29/postfix-relay-modified">Postfix-Relay-on-Docker</a> 
 ---------------
 variables:
 ---------------
      SMTP_LOGIN= user@email-adress.com 
      SMTP_PASSWORD= user_password
      SERVER= smtp-server.of.user
-     
-     
-     
+          
 -------------------
 to launch : 
 -------------------
