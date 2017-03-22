@@ -7,7 +7,6 @@ postmap /etc/postfix/sasl_passwd
 
 echo "/.+/  ${SMTP_LOGIN}" >> /etc/postfix/canonical
 
-
 #stunnel start 
 echo "  connect = ${SERVER}:465" >> /etc/stunnel/stunnel.conf
 stunnel /etc/stunnel/stunnel.conf 
