@@ -21,16 +21,13 @@ relayhost=[127.0.0.1]:11125\n\
 smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd\n\
 sender_canonical_maps =pcre:/etc/postfix/canonical" >> /etc/postfix/main.cf \
 
-#master.cf
-&& sed -i '/\#submission/a \  -o smtpd_tls_wrappermode=yes' /etc/postfix/master.cf \
-&& sed -i '/\#submission/a \  -o smtpd_sasl_auth_enable=yes' /etc/postfix/master.cf \
 
 #tcp wrapper configuration
 && echo -e "[smtp-tls-wrapper]\n\
   accept = 11125\n\
   client = yes " >> /etc/stunnel/stunnel.conf \
 
-#rsyslog configuration
+#rsyslog configuration ---> This needs to enable postfix logs inside container 
 && rm -f /etc/rsyslog.d/listen.conf \
 && sed -i '/$ModLoad imjournal/d' /etc/rsyslog.conf \
 && sed -i '/$IMJournalStateFile/d' /etc/rsyslog.conf \
@@ -45,8 +42,6 @@ RUN chmod 700 /root/run.sh
 ENV  SMTP_LOGIN=aladin29@email-adress.com \ 
      SMTP_PASSWORD=aladin-password\
      SERVER=smtp.aladin.com 
-
-
 
 #port declare
 EXPOSE 25
