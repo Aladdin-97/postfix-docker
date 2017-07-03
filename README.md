@@ -5,7 +5,7 @@ Simple mail relay configuration
 -----------------------------------
 contains : 
      
-     - Dockerfile to build image which include postfix service to relay mail, rsyslog to log inside container, stunnel service to             implement "tls wrapper"
+     - Dockerfile to build image which include postfix service to relay mail, rsyslog to log inside container, stunnel service to implement "tls wrapper"
      - run.sh to start postfix, rsyslog and stunnel services
      - README.md file with some instructions on how to use ;)
 
