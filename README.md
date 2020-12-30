@@ -28,5 +28,5 @@ to test:
      sendmail aladin29@aladin.bd << EOF
      SUBJECT: MAIL RELAY TEST
  
-     MIA KHALIFA WANTS U LOL ;)
+     Salvini WANTS U LOL ;)
      EOF
